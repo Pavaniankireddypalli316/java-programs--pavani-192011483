@@ -1,30 +1,27 @@
-import java.util.*;
-class Fibonacci{
-   public static void main(String[] args){
-      int a=0;
-      int b=1;
-      int c=a+b;
-      Scanner s=new Scanner(System.in);
-      int n=s.nextInt();
-      List<Integer>li=new ArrayList<>();
-      li.add(a);
-      li.add(b);
-      for(int i=0;i<(n*2)-1;i++){
-         c=a+b;
-         a=b;
-         b=c;
-         li.add(c);
-      }
-  
-      int sum=0;
-      for(int i=0;i<li.size();i++){
-         if(i%2==0){
-            
-            sum=sum+li.get(i);
-         }
-      }
-      System.out.println("sum of even fibonacci is ="+sum);
-
-
-   }
+import java.util.Scanner;
+public class Fibonacci{
+    public  static void main(String[] args)
+    {
+try{
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter an number");
+        int n=s.nextInt();
+        int a=0,b=1,c=0,x=n-2;
+        System.out.print(a+" ");
+        System.out.print(b+" ");
+        while(x>0)
+        {
+            c=a+b;
+            System.out.print(c+" ");
+            a=b;
+            b=c;
+            x=x-1;
+        }
+    }
+        catch(Exception e)
+        {
+         System.out.println("Invalid");   
+        }
+        
+    }
 }
